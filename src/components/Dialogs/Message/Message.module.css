@@ -1,0 +1,15 @@
+.Message {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.messageItem {
+    font-size: 20px;
+}

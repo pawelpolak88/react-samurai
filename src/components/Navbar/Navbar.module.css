@@ -1,0 +1,15 @@
+.Navbar {
+    grid-area: nav;
+    background-color: bisque;
+    padding: 20px;
+}
+
+
+a {
+    text-decoration: none;
+    color: #ffff;
+}
+
+.active {
+    color: black;
+}

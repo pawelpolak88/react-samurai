@@ -1,0 +1,24 @@
+.Dialog {
+    display: flex;
+    align-items: center;
+}
+
+.avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.item {
+    color: #fff;
+    text-decoration: none;
+}
+
+.active {
+    color: #000;
+}
+
+/* .dialogActive a {
+    color: gold;
+} */
