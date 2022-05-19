@@ -4,7 +4,7 @@ import './App.css';
 import Header from './components/Header/Header';
 import Navbar from './components/Navbar/Navbar';
 import Profile from './components/Profile/Profile';
-import Dialogs from './components/Dialogs/Dialogs';
+import DialogsContainer from './components/Dialogs/DialogsContainer';
 import News from './components/News/News';
 import Music from './components/Music/Music';
 import Settings from './components/Settings/Settings';
@@ -23,21 +23,14 @@ const App = (props) => {
 
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route path="profile"
+          <Route path="/"
             element={
-              <Profile
-                state={props.state.profilePage}
-                dispatch={props.dispatch}
-
-              />
+              <Profile />
             }
           />
           <Route path="dialogs/*"
             element={
-              <Dialogs
-                state={props.state.dialogsPage}
-                dispatch={props.dispatch}
-              />
+              <DialogsContainer />
             }
           />
           <Route path="news" element={<News />} />
@@ -45,7 +38,8 @@ const App = (props) => {
           <Route path="settings" element={<Settings />} />
           <Route path="friends"
             element={
-              <Friends state={props.state.friendsPage} />
+              <Friends />
+              // <Friends state={props.state.friendsPage} />
             }
           />
         </Route>
