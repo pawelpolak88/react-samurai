@@ -24,20 +24,26 @@ const initialState = {
 
 const dialogsReducer = (state = initialState, action) => {
 
+    let stateCopy = {
+        ...state,
+        // messages: [...state.messages]
+    }
+
     switch (action.type) {
-        case ADD_MESSAGE:
+        case ADD_MESSAGE: {
             let newMessage = {
                 id: new Date(),
                 message: state.newMessageText,
                 checkbox: "https://yt3.ggpht.com/ytc/AKedOLS1AZhEVoT69mDznUiqA5tTkS4D47iqYSE7eYpNCg=s48-c-k-c0x00ffffff-no-rj"
             }
-
-            state.messages.push(newMessage)
-            state.newMessageText = "";
-            return state
-        case UPDATE_NEW_MESSAGE_TEXT:
-            state.newMessageText = action.newMessage
-            return state
+            stateCopy.messages.push(newMessage);
+            stateCopy.newMessageText = "";
+            return stateCopy;
+        }
+        case UPDATE_NEW_MESSAGE_TEXT: {
+            stateCopy.newMessageText = action.newMessage;
+            return stateCopy;
+        }
         default:
             return state
     }

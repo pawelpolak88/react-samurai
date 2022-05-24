@@ -36,12 +36,12 @@ const App = (props) => {
           <Route path="news" element={<News />} />
           <Route path="music" element={<Music />} />
           <Route path="settings" element={<Settings />} />
-          <Route path="friends"
+          {/* <Route path="friends"
             element={
-              <Friends />
-              // <Friends state={props.state.friendsPage} />
+              // <Friends />
+              <Friends state={props.state.friendsPage} />
             }
-          />
+          /> */}
         </Route>
       </Routes>
 
