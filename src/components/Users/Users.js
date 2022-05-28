@@ -1,7 +1,17 @@
 import React from "react";
 import classes from "./Users.module.css"
+import axios from "axios";
+import userPhoto from "../../assets/images/user.png"
 
 const Users = (props) => {
+
+    if (props.users.length === 0) {
+        axios.get('https://social-network.samuraijs.com/api/1.0/users')
+            .then(response => {
+                props.setUsers(response.data.items)
+            })
+    }
+
     return (
         <div className={classes.Users}>
             {
@@ -10,7 +20,7 @@ const Users = (props) => {
                         <div key={u.id} className={classes.UsersContainer}>
                             <div className={classes.column}>
                                 <div className={classes.photo}>
-                                    <img src={u.photoUrl} />
+                                    <img src={u.photos.small != null ? u.photos.small : userPhoto} />
                                 </div>
                                 <div className={classes.btn}>
                                     {u.followed
@@ -25,13 +35,13 @@ const Users = (props) => {
                             </div>
                             <div className={classes.column}>
                                 <div className={classes.about}>
-                                    <div>{u.fullName}</div>
+                                    <div>{u.name}</div>
                                     <div>{u.status}</div>
                                 </div>
-                                <div className={classes.location}>
+                                {/* <div className={classes.location}>
                                     <div>{u.location.country}</div>
                                     <div>{u.location.city}</div>
-                                </div>
+                                </div> */}
                             </div>
                         </div>
                     )

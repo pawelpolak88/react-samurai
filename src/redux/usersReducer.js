@@ -3,41 +3,7 @@ const UNFOLLOW = 'UNFOLLOW'
 const SET_USERS = 'SET-USERS'
 
 let initialState = {
-    users: [
-        {
-            id: 1,
-            photoUrl: "https://yt3.ggpht.com/a93VYC0Cf-wy9lSZeKhmPCbkILrH-Hha_K9SkUAsM84MpviLQC__ckYfKMGLDqYvlWGnyrLe3g=s48-c-k-c0x00ffffff-no-rj",
-            fullName: "Dmitry",
-            status: "text hello",
-            followed: true,
-            location: {
-                country: "Belarus",
-                city: "Brest"
-            }
-        },
-        {
-            id: 2,
-            photoUrl: "https://yt3.ggpht.com/a93VYC0Cf-wy9lSZeKhmPCbkILrH-Hha_K9SkUAsM84MpviLQC__ckYfKMGLDqYvlWGnyrLe3g=s48-c-k-c0x00ffffff-no-rj",
-            fullName: "Ivan",
-            status: "text hello",
-            followed: false,
-            location: {
-                country: "Poland",
-                city: "Warszaw"
-            }
-        },
-        {
-            id: 3,
-            photoUrl: "https://yt3.ggpht.com/a93VYC0Cf-wy9lSZeKhmPCbkILrH-Hha_K9SkUAsM84MpviLQC__ckYfKMGLDqYvlWGnyrLe3g=s48-c-k-c0x00ffffff-no-rj",
-            fullName: "Gena",
-            status: "text hello",
-            followed: true,
-            location: {
-                country: "Russian",
-                city: "Moscow"
-            }
-        }
-    ]
+    users: []
 }
 
 
