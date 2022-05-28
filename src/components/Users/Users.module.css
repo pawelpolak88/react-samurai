@@ -1,0 +1,31 @@
+.Users {
+    padding: 10px;
+}
+
+.UsersContainer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+}
+
+.column:last-child {
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    flex: 1;
+    border: 3px solid #fff;
+    padding: 10px;
+    margin-left: 20px;
+}
+
+.photo img {
+    width: 100px;
+    height: 100px;
+}
+
+.btn {}
+
+.about {}
+
+.location {}
