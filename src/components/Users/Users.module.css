@@ -24,8 +24,32 @@
     height: 100px;
 }
 
-.btn {}
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #fff;
+    background-color: blueviolet;
+    padding: 0 10px;
+    margin-bottom: 20px;
+    overflow-x: auto;
+
+
+}
+
+.pagination span {
+    cursor: pointer;
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+
+.selectedPage {
+    font-weight: bold;
+}
+
+/* .btn {}
 
 .about {}
 
-.location {}
+.location {} */
