@@ -35,20 +35,7 @@ class Users extends React.Component {
         return (
             <div className={classes.Users}>
 
-                <div className={classes.pagination}>
-                    {pagesArray.map(p => {
-                        return (
-                            <span
-                                key={p}
-                                className={this.props.currentPage === p ? classes.selectedPage : ""}
-                                onClick={(e) => this.onPageChanged(p)}>
-                                {p}
-                            </span>
 
-                        );
-                    })}
-
-                </div>
                 {
                     this.props.users
                         .map(u =>
@@ -77,6 +64,21 @@ class Users extends React.Component {
                             </div>
                         )
                 }
+
+                <div className={classes.pagination}>
+                    {pagesArray.map(p => {
+                        return (
+                            <span
+                                key={p}
+                                className={this.props.currentPage === p ? classes.selectedPage : ""}
+                                onClick={(e) => this.onPageChanged(p)}>
+                                {p}
+                            </span>
+
+                        );
+                    })}
+
+                </div>
             </div>
         );
     }
