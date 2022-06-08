@@ -3,6 +3,7 @@ import classes from "./Users.module.css"
 import userPhoto from "../../assets/images/user.png"
 
 const Users = (props) => {
+
     let pagesCount = Math.ceil(props.totalUsersCount / props.pageSize);
     let pagesArray = [];
 
@@ -18,7 +19,7 @@ const Users = (props) => {
                         <div key={u.id} className={classes.UsersContainer}>
                             <div className={classes.column}>
                                 <div className={classes.photo}>
-                                    <img alt="user-photo" src={u.photos.small != null ? u.photos.small : userPhoto} />
+                                    <img alt="user-img" src={u.photos.small != null ? u.photos.small : userPhoto} />
                                 </div>
                                 <div className={classes.btn}>
                                     {u.followed
