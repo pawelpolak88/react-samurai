@@ -1,5 +1,6 @@
 const ADD_POST = "ADD-POST";
 const UPDATE_NEW_POST_TEXT = "UPDATE-NEW-POST-TEXT";
+const SET_USER_PROFILE = "SET-USER-PROFILE";
 
 const initialState = {
     posts: [
@@ -9,7 +10,8 @@ const initialState = {
         { id: 4, message: "Nice day", likeCounts: "12", userAvatar: "https://yt3.ggpht.com/ytc/AKedOLS1AZhEVoT69mDznUiqA5tTkS4D47iqYSE7eYpNCg=s48-c-k-c0x00ffffff-no-rj" },
         { id: 5, message: "Buy, buy", likeCounts: "23", userAvatar: "https://yt3.ggpht.com/ytc/AKedOLS1AZhEVoT69mDznUiqA5tTkS4D47iqYSE7eYpNCg=s48-c-k-c0x00ffffff-no-rj" },
     ],
-    newPostText: ""
+    newPostText: "",
+    profile: null
 }
 
 const profileReducer = (state = initialState, action) => {
@@ -33,6 +35,14 @@ const profileReducer = (state = initialState, action) => {
             stateCopy.newPostText = action.newText;
             return stateCopy;
         }
+
+        case SET_USER_PROFILE: {
+            return {
+                ...state,
+                profile: action.profile
+            }
+        }
+
         default:
             return state
     }
@@ -52,7 +62,13 @@ export const updateNewPostText = (text) => {
         type: UPDATE_NEW_POST_TEXT,
         newText: text,
     }
-
 };
+
+export const setUserProfile = (profile) => {
+    return {
+        type: SET_USER_PROFILE,
+        profile
+    }
+}
 
 export default profileReducer;
