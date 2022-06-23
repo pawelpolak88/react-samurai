@@ -2,7 +2,6 @@ import React from "react";
 import classes from "./Users.module.css"
 import userPhoto from "../../assets/images/user.png"
 import { NavLink } from "react-router-dom";
-import axios from "axios";
 import { usersAPI } from "../../api/api";
 
 
@@ -30,22 +29,26 @@ const Users = (props) => {
                                 </div>
                                 <div className={classes.btn}>
                                     {u.followed
-                                        ? <button onClick={() => {
+                                        ? <button disabled={props.isFollowingInProgress.some(id => id === u.id)} onClick={() => {
+                                            props.setTogglefollowingProgress(true, u.id)
                                             usersAPI.unfollow(u.id)
                                                 .then(response => {
                                                     if (response.data.resultCode === 0) {
                                                         props.unfollow(u.id);
                                                     }
+                                                    props.setTogglefollowingProgress(false, u.id)
                                                 })
                                         }}>
                                             Unfollow
                                         </button>
-                                        : <button onClick={() => {
+                                        : <button disabled={props.isFollowingInProgress.some(id => id === u.id)} onClick={() => {
+                                            props.setTogglefollowingProgress(true, u.id)
                                             usersAPI.follow(u.id)
                                                 .then(response => {
                                                     if (response.data.resultCode === 0) {
                                                         props.follow(u.id);
                                                     }
+                                                    props.setTogglefollowingProgress(false, u.id)
                                                 })
                                         }}>
                                             Follow
