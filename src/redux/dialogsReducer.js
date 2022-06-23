@@ -3,12 +3,12 @@ const UPDATE_NEW_MESSAGE_TEXT = "UPDATE-NEW-MESSAGE-TEXT";
 
 const initialState = {
     dialogs: [
-        { id: 1, name: "Dimych", userAvatar: "https://yt3.ggpht.com/ytc/AKedOLS1AZhEVoT69mDznUiqA5tTkS4D47iqYSE7eYpNCg=s48-c-k-c0x00ffffff-no-rj" },
-        { id: 2, name: "Andrew", userAvatar: "https://yt3.ggpht.com/ytc/AKedOLS1AZhEVoT69mDznUiqA5tTkS4D47iqYSE7eYpNCg=s48-c-k-c0x00ffffff-no-rj" },
-        { id: 3, name: "Sveta", userAvatar: "https://yt3.ggpht.com/ytc/AKedOLS1AZhEVoT69mDznUiqA5tTkS4D47iqYSE7eYpNCg=s48-c-k-c0x00ffffff-no-rj" },
-        { id: 4, name: "Sasha", userAvatar: "https://yt3.ggpht.com/ytc/AKedOLS1AZhEVoT69mDznUiqA5tTkS4D47iqYSE7eYpNCg=s48-c-k-c0x00ffffff-no-rj" },
-        { id: 5, name: "Victor", userAvatar: "https://yt3.ggpht.com/ytc/AKedOLS1AZhEVoT69mDznUiqA5tTkS4D47iqYSE7eYpNCg=s48-c-k-c0x00ffffff-no-rj" },
-        { id: 6, name: "Valeta", userAvatar: "https://yt3.ggpht.com/ytc/AKedOLS1AZhEVoT69mDznUiqA5tTkS4D47iqYSE7eYpNCg=s48-c-k-c0x00ffffff-no-rj" },
+        { id: 1, name: "Dimych", userAvatar: "https://sun1.userapi.com/sun1-99/s/v1/ig2/JWSYDS19oLKa56WSkS-i_Z2chbrfrQ4h_Hk5J8nbuJlU9NWtGwq2PzdDe6aIwltP16dfUuh9j50zftXdVm50k-KR.jpg?size=50x50&quality=96&crop=321,1,1915,1915&ava=1" },
+        { id: 2, name: "Andrew", userAvatar: "https://sun1.userapi.com/sun1-99/s/v1/ig2/JWSYDS19oLKa56WSkS-i_Z2chbrfrQ4h_Hk5J8nbuJlU9NWtGwq2PzdDe6aIwltP16dfUuh9j50zftXdVm50k-KR.jpg?size=50x50&quality=96&crop=321,1,1915,1915&ava=1" },
+        { id: 3, name: "Sveta", userAvatar: "https://sun1.userapi.com/sun1-99/s/v1/ig2/JWSYDS19oLKa56WSkS-i_Z2chbrfrQ4h_Hk5J8nbuJlU9NWtGwq2PzdDe6aIwltP16dfUuh9j50zftXdVm50k-KR.jpg?size=50x50&quality=96&crop=321,1,1915,1915&ava=1" },
+        { id: 4, name: "Sasha", userAvatar: "https://sun1.userapi.com/sun1-99/s/v1/ig2/JWSYDS19oLKa56WSkS-i_Z2chbrfrQ4h_Hk5J8nbuJlU9NWtGwq2PzdDe6aIwltP16dfUuh9j50zftXdVm50k-KR.jpg?size=50x50&quality=96&crop=321,1,1915,1915&ava=1" },
+        { id: 5, name: "Victor", userAvatar: "https://sun1.userapi.com/sun1-99/s/v1/ig2/JWSYDS19oLKa56WSkS-i_Z2chbrfrQ4h_Hk5J8nbuJlU9NWtGwq2PzdDe6aIwltP16dfUuh9j50zftXdVm50k-KR.jpg?size=50x50&quality=96&crop=321,1,1915,1915&ava=1" },
+        { id: 6, name: "Valeta", userAvatar: "https://sun1.userapi.com/sun1-99/s/v1/ig2/JWSYDS19oLKa56WSkS-i_Z2chbrfrQ4h_Hk5J8nbuJlU9NWtGwq2PzdDe6aIwltP16dfUuh9j50zftXdVm50k-KR.jpg?size=50x50&quality=96&crop=321,1,1915,1915&ava=1" },
     ],
 
     messages: [
