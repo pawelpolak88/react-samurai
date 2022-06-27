@@ -11,6 +11,7 @@ import Settings from './components/Settings/Settings';
 import UsersContainer from './components/Users/UsersContainer';
 import Friends from './components/Friends/Friends';
 import Layout from './components/Layout/Layout';
+import Login from './components/Login/Login';
 
 
 
@@ -24,6 +25,9 @@ const App = (props) => {
 
       <Routes>
         <Route path="/" element={<Layout />}>
+          <Route path="login" element={<Login />} />
+
+
           <Route path='/profile/:userId' element={<ProfileContainer />} />
           <Route path='/profile/*' element={<ProfileContainer />} />
           <Route path="dialogs/*"
