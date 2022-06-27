@@ -28,7 +28,7 @@ export const headersAPI = {
 }
 
 export const profileAPI = {
-    getUsers(userId) {
+    getProfile(userId) {
         return instance.get(`profile/ ` + userId)
     }
 }

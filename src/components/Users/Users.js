@@ -2,11 +2,8 @@ import React from "react";
 import classes from "./Users.module.css"
 import userPhoto from "../../assets/images/user.png"
 import { NavLink } from "react-router-dom";
-import { usersAPI } from "../../api/api";
-
 
 const Users = (props) => {
-
     let pagesCount = Math.ceil(props.totalUsersCount / props.pageSize);
     let pagesArray = [];
 
@@ -30,26 +27,12 @@ const Users = (props) => {
                                 <div className={classes.btn}>
                                     {u.followed
                                         ? <button disabled={props.isFollowingInProgress.some(id => id === u.id)} onClick={() => {
-                                            props.setTogglefollowingProgress(true, u.id)
-                                            usersAPI.unfollow(u.id)
-                                                .then(response => {
-                                                    if (response.data.resultCode === 0) {
-                                                        props.unfollow(u.id);
-                                                    }
-                                                    props.setTogglefollowingProgress(false, u.id)
-                                                })
+                                            props.unfollowThunkCreator(u.id)
                                         }}>
                                             Unfollow
                                         </button>
                                         : <button disabled={props.isFollowingInProgress.some(id => id === u.id)} onClick={() => {
-                                            props.setTogglefollowingProgress(true, u.id)
-                                            usersAPI.follow(u.id)
-                                                .then(response => {
-                                                    if (response.data.resultCode === 0) {
-                                                        props.follow(u.id);
-                                                    }
-                                                    props.setTogglefollowingProgress(false, u.id)
-                                                })
+                                            props.followThunkCreator(u.id)
                                         }}>
                                             Follow
                                         </button>

@@ -3,17 +3,14 @@ import { connect } from "react-redux"
 import Profile from "./Profile";
 import { setUserProfile } from "../../redux/profileReducer"
 import { useParams } from 'react-router-dom'
-import { profileAPI } from "../../api/api"
+import { getUsersThunkCreator } from "../../redux/profileReducer"
 
 class ProfileContainer extends React.Component {
     componentDidMount() {
         let userId = this.props.param.userId
         if (!userId) userId = 2
 
-        profileAPI.getUsers(userId)
-            .then(response => {
-                this.props.setUserProfile(response.data)
-            })
+        this.props.getUsersThunkCreator(userId)
     }
 
     render() {
@@ -37,5 +34,5 @@ const TakeParams = (props) => {
 }
 
 export default connect(mapStateToProps, {
-    setUserProfile
+    setUserProfile, getUsersThunkCreator
 })(TakeParams);
