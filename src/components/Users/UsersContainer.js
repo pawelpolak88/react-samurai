@@ -12,6 +12,7 @@ import { connect } from "react-redux";
 import Users from "./Users";
 import Preloader from "../common/Preloader/Preloader";
 import { WithAuthRedirect } from "../../hoc/WithAuthRedirect"
+import { compose } from "redux";
 
 
 
@@ -61,43 +62,17 @@ let mapStateToProps = (state) => {
     }
 }
 
-const RedirectComponent = WithAuthRedirect(UsersContainer)
-
-export default connect(mapStateToProps,
-    {
-        follow,
-        unfollow,
-        setCurrentPage,
-        setTogglefollowingProgress,
-        getUsersThunkCreator,
-        followThunkCreator,
-        unfollowThunkCreator
-    }
-)(RedirectComponent);
-
-// let mapDispatchToProps = (dispatch) => {
-//     return {
-//         follow: (userId) => {
-//             dispatch(followActionCreater(userId))
-//         },
-
-//         unfollow: (userId) => {
-//             dispatch(unfollowActionCreater(userId))
-//         },
-
-//         setUsers: (users) => {
-//             dispatch(setUsersActionCreater(users))
-//         },
-
-//         setCurrentPage: (pageNumber) => {
-//             dispatch(setCurrentPageActionCreater(pageNumber))
-//         },
-
-//         setUsersTotalCount: (totalCount) => {
-//             dispatch(setUsersTotalCountActionCreater(totalCount))
-//         },
-//         setToggleIsFetching: (isFetching) => {
-//             dispatch(setToggleIsFetchingActionCreater(isFetching))
-//         }
-//     }
-// }
+export default compose(
+    connect(mapStateToProps,
+        {
+            follow,
+            unfollow,
+            setCurrentPage,
+            setTogglefollowingProgress,
+            getUsersThunkCreator,
+            followThunkCreator,
+            unfollowThunkCreator
+        }
+    ),
+    WithAuthRedirect
+)(UsersContainer)
