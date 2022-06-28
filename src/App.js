@@ -25,7 +25,7 @@ const App = (props) => {
 
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route path="login" element={<Login />} />
+
 
 
           <Route path='/profile/:userId' element={<ProfileContainer />} />
@@ -45,6 +45,8 @@ const App = (props) => {
               <Friends state={props.state.friendsPage} />
             }
           /> */}
+
+          <Route path="/login" element={<Login />} />
         </Route>
       </Routes>
 
