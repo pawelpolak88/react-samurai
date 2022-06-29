@@ -1,6 +1,7 @@
 import React from "react";
 import Preloader from "../../common/Preloader/Preloader";
 import classes from "./ProfileInfo.module.css"
+import ProfileStatus from "../ProfileStatus/ProfileStatus"
 
 const ProfileInfo = (props) => {
     // console.log(props);
@@ -24,6 +25,7 @@ const ProfileInfo = (props) => {
                     <div className={classes.userInfo}>
                         <h3 className={classes.name}>{props.profile.fullName}</h3>
                         <h5 className={classes.about}>{props.profile.aboutMe}</h5>
+                        <ProfileStatus status="Test post" />
                     </div>
                 </div>
 
